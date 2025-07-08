@@ -1,5 +1,14 @@
+-git -- version control 
+                github, gitlab, bitbucket all works over git and provides their own facilities
+
+git - version control s/w, cli    and github - platform , gui
+
+
+
+fs can't recover while git can recover and rollback
+
 Basic Git Commands -
- 
+
 
         git init - initialize a git repo in local
 
@@ -28,9 +37,10 @@ Basic Git Commands -
         if git push origin master ---- creates a master branch and pushes to it
 
 
-        (((developer setting -> create token --> copy -->   git remote set-url origin "url"   connects the github)))
+        (((developer setting -> create token --> copy -->   git remote set-url origin "url"   connects the github))))
 
 
 
-
-
+        clone -- github to local
+        fork --  github to github copy ----  
+                sync fork to balance the changes on github
