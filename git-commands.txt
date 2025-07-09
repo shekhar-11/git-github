@@ -1,5 +1,5 @@
 -git -- version control 
-                github, gitlab, bitbucket all works over git and provides their own facilities
+		github, gitlab, bitbucket all works over git and provides their own facilities
 
 git - version control s/w, cli    and github - platform , gui
 i
@@ -11,62 +11,62 @@ fs can't recover while git can recover and rollback
 Basic Git Commands -
 
 
-        #git init 
-        -- initialize a git repo in local
+	#git init 
+	-- initialize a git repo in local
 
-        #git add filename 
-        -- from untracked to staged
-        #git rm --cached filename 
-        -- staged to untracked again
-        #git commit -m "MSG"  
-        -- staged to tracked
-
-
-        if(just removed from the local)
-        #git restore filename 
-        -- restore the file from vcs (check the deleted from git status)
-
-        if(removed from vcs) -- 
-        #git rm filename
-        #git restore --staged filename    
-        -- unstages the deletion
-        #git checkout -- filename
-        --  restores the file from the last commit
-
-        #git push 
-        -- local to remote github(as it is remote)
-
-        #git remote add origin url 
-        -- to add the remote access for the repo ie to connect to the remote
-        #git remote -v  
-        -- to check the remote access url
+	#git add filename 
+	-- from untracked to staged
+	#git rm --cached filename 
+	-- staged to untracked again
+	#git commit -m "MSG"  
+	-- staged to tracked
 
 
-        whenever we create a branch on local -- master
-        on github -- main
+	if(just removed from the local)
+	#git restore filename 
+	-- restore the file from vcs (check the deleted from git status)
+	
+	if(removed from vcs) -- 
+	#git rm filename
+	#git restore --staged filename    
+	-- unstages the deletion
+	#git checkout -- filename	
+	--  restores the file from the last commit
+
+	#git push 
+	-- local to remote github(as it is remote)
+
+	#git remote add origin url 
+	-- to add the remote access for the repo ie to connect to the remote
+	#git remote -v  
+	-- to check the remote access url
 
 
-        (((developer setting -> create token --> copy -->   git remote set-url origin "url"   connects the github))))
+	whenever we create a branch on local -- master
+	on github -- main
 
 
+	(((developer setting -> create token --> copy -->   git remote set-url origin "url"   connects the github))))
 
-        #clone 
-        -- github to local
-        #fork
-         --  github to github copy ----  
+	
 
+	#clone 
+	-- github to local
+	#fork
+	 --  github to github copy ----  
+	
 
-        sync fork to balance the changes on github
+	sync fork to balance the changes on github
  
-
-        #git pull origin branch_name
-         to bring the changes from github to local
-        #git push origin branch_name 
-         to push to particular branch (main for github and master for local or other can be created too)
-
-
+	
+	#git pull origin branch_name
+	 to bring the changes from github to local
+	#git push origin branch_name 
+	 to push to particular branch (main for github and master for local or other can be created too)
 
 
+
+	
 
 
 
@@ -75,45 +75,165 @@ Basic Git Commands -
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>BRANCHES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 Branches -- 
-                helps in providing the isolation
-                same code copies in local --- branches
+		helps in providing the isolation
+		same code copies in local --- branches
+	
+	root / first -- on local -- master
+	root / first -- on github -- main
 
-        root / first -- on local -- master
-        root / first -- on github -- main
+	
+	#git branch 
+	- tells about branch
+	#git checkout -B dev 	
+	--  -B means new branch name dev 			
+	--checkout---switch to that branch
 
-
-        #git branch 
-        - tells about branch
-        #git checkout -B dev 
-        --  -B means new branch name dev 
-        --checkout---switch to that branch
-
-        #git switch branch_name
-
-
-        main code is always in master -- working code is given here
-        another same codes in staging --- testing 
-        same code in dev branch -- development ------
-                                                        a feature branch is created from this dev
-                                                        so as to add value to diff features of the project
+	#git switch branch_name
 
 
-
-
-        #git log 
-        --
-        head --> latest commit in the particular branch
-        #git log --oneline
-
-
-        git checkout/switch branch_name
+	main code is always in master -- working code is given here
+	another same codes in staging --- testing 
+	same code in dev branch -- development ------
+							a feature branch is created from this dev
+							so as to add value to diff features of the project
 
 
 
-        []--->[] --> [head of master branch] 
-                     |
-                     |
-                    []--> [head of dev branch] 
 
-        Merge the dev to master
+	#git log 
+	--
+	head --> latest commit in the particular branch
+	#git log --oneline
+
+
+	git checkout/switch branch_name
+
+
+
+	[]--->[] --> [head of master branch] 
+		     |
+		     |
+		    []--> [head of dev branch] 
+
+	Merge the dev to master(on github)
+		pull rqst -> base is to which the branch to be merged
+			     compare is the branch which has to be merged
+			     create pr
+
+	else
+	#git checkout BASE_BRANCH
+	# git merge to_be_meged_branch
+
+	fetch --- to bring all branches to local
+	pull -- to bring all changes specific to particular branch to local
+
+
+
+
+
+	
+	>>>>>>>>>>>>>>>>>>>>>>>>HOOKS<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	hooks are for testing before pushing the code --- precommit test
+	eg - error in code or unused variables for python can be tested using --- flake8
+
+
+
+	create a file in hooks of .git folder
+	pre-commit or pre-push ............
+
+	#files = files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.py$')  
+	--to filter out the files with .py file 
+
+	#flake8 $files	
+	--to test the files 
+
+	make this file executable then just try commits	
+	similarly we can use other hooks too 
+
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
