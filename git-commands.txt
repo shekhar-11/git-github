@@ -175,8 +175,10 @@ Branches --
 
 
 
+>>>>>>>>>>>>>GITHUB DEPLOYMENT OVER GITHUB PAGES<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-
+write the deployment action and select github actions under settings of repo -> pages -> deployment
+handle the error if any
 
 
 
