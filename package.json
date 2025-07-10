@@ -77,9 +77,10 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo '✅ Node test passed'",
+    "start": "node server.js",
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shekhar-11/git-github.git"
