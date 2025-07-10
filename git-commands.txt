@@ -154,7 +154,23 @@ Branches --
 
 	
 	
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GITHUB ACTIONS AND WORKFLOWS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	For creating CI/CD pipelines like JENKINS
+	github actions are the built in tool to BUILD - TEST - DEPLOY the project
+
+
+	github actions are in .github file of gihub its like git hooks
+
+	#####go through the templates
 	
+	use the pre-defined templates
 
 
 
