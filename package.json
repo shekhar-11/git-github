@@ -78,7 +78,7 @@
   },
   "scripts": {
     "test": "echo '✅ Node test passed'",
-    "start": "node server.js",
+    "start": "node server.js"  
   },
 
   "repository": {
